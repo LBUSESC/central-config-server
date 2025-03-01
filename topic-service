@@ -29,12 +29,13 @@ eureka:
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
 student-service-base-url: lb://student-service/student
-
 management:
   endpoints:
     web:
       exposure:
         include: "*"
   endpoint:
+    health:
+      show-details: always
     info:
       enabled: true
